@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script>
+<script type="text/babel">
 import info from '../../info.md';
 export default {
   name: 'HelloWorld',
