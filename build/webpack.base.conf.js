@@ -9,9 +9,11 @@ const slugify = require('transliteration').slugify;
 const striptags = require('./strip-tags');
 
 function convert(str) {
+  console.log(str);
   str = str.replace(/(&#x)(\w{4});/gi, function($0) {
     return String.fromCharCode(parseInt(encodeURIComponent($0).replace(/(%26%23x)(\w{4})(%3B)/g, '$2'), 16));
   });
+  console.log(str);
   return str;
 }
 
